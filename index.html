@@ -1,1 +1,39 @@
-hi 
+#How to instal cloudflare warp
+
+1.# Add cloudflare gpg key
+curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
+
+2.# Add this repo to your apt repositories
+echo "deb [signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
+
+
+3.# Install
+sudo apt-get update && sudo apt-get install cloudflare-warp
+
+4.#warp-cli registration new
+
+5.warp-cli connect
+
+#How to install  Aydesk
+
+1.sudo apt update && sudo apt install wget && wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add - && echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list && sudo apt update && sudo apt install anydesk -y && anydesk
+
+# How to install Zoom
+
+1.Download the DEB installer file from our Download Center
+  Lonk -https://cdn.zoom.us/prod/5.17.11.3835/zoom_amd64.deb
+2.sudo apt install ./zoom_amd64.deb
+3.sudo apt update
+4.Please go to this file =>  sudo nano /etc/gdm3/custom.conf
+5.Uncomment this line. => WaylandEnable=false
+6.echo $XDG_SESSION_TYPE
+7.sudo systemctl restart gdm
+
+
+#How to install Time Doctor
+
+https://s3.amazonaws.com/sfproc-downloads/3.9.91/linux/ubuntu-18.04/interactive/timedoctor2-setup-3.9.91-linux-x86_64.run
+ 
+1.Downlod the Timedocto.run instalation file
+2.Right click the Timedocto.run instalation file and click properties ==> then ckick Permissions =>mek sure Allow Executing file as program is Chack
+3.Right click the Timedocto.run file and click Run a Program
